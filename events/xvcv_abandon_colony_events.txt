@@ -1,0 +1,82 @@
+namespace = xvcv_abandon_colony
+
+planet_event = {
+	id = xvcv_abandon_colony.1
+	title = "xvcv_abandon_colony.1.name"
+	desc = "xvcv_abandon_colony.1.desc"
+	picture = GFX_evt_burning_settlement
+	is_triggered_only = yes
+	location = root
+
+	option = {
+		name = xvcv_abandon_colony.1.a
+		every_owned_pop = { kill_pop = yes }
+		destroy_colony = yes
+	}
+	option = {
+		name = xvcv_abandon_colony.1.b
+		every_owned_pop = {
+			resettle_pop = {
+				pop = this
+				planet = root.owner.capital_scope
+			}
+		}
+		destroy_colony = yes
+	}
+	option = {
+		name = xvcv_abandon_colony.1.c
+		every_owned_pop = { kill_pop = yes }
+		destroy_colony = yes
+		if = {
+			limit = {
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_habitable
+				}
+			}
+			change_pc = pc_shattered
+		}
+		else_if = {
+			limit = { is_planet_class = pc_habitat }
+			hidden_effect = { spawn_habitat_cracker_effect = yes }
+			remove_planet = yes
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_habitable }
+			hidden_effect = { spawn_ringworld_cracker_effect = yes }
+			change_pc = pc_ringworld_habitable_damaged
+		}
+	}
+	option = {
+		name = xvcv_abandon_colony.1.d
+		every_owned_pop = {
+			resettle_pop = {
+				pop = this
+				planet = root.owner.capital_scope
+			}
+		}
+		destroy_colony = yes
+		if = {
+			limit = {
+				NOR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_ringworld_habitable
+				}
+			}
+			change_pc = pc_shattered
+		}
+		else_if = {
+			limit = { is_planet_class = pc_habitat }
+			hidden_effect = { spawn_habitat_cracker_effect = yes }
+			remove_planet = yes
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_habitable }
+			hidden_effect = { spawn_ringworld_cracker_effect = yes }
+			change_pc = pc_ringworld_habitable_damaged
+		}
+	}
+	option = {
+		name = xvcv_abandon_colony.close_window
+	}
+}

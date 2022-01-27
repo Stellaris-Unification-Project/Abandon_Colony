@@ -1,0 +1,26 @@
+xvcv_abandon_colony_decision = {
+	owned_planets_only = yes
+	icon = decision_burning_settlement
+
+	resources = {
+		category = decisions
+	}
+	
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+	}
+	
+	allow = {
+		owner = { num_owned_planets > 1 } #you should not kill yourself
+	}
+	
+	effect = {
+		custom_tooltip = xvcv_abandon_colony_decision_effects
+		hidden_effect = { planet_event = { id = xvcv_abandon_colony.1 } }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

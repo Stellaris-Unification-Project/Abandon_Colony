@@ -1,0 +1,21 @@
+[h1] Description [/h1]
+This is a simple mod that lets you abandon a colony.
+
+Does a colony you just acquired through war seem to be useless?
+Does a xeno pop in your empire is so disgusting that you wanna kill it with the planet it lives on?
+
+Here's your solution!
+
+This mod lets you abandon a colony and kill every pop live on.
+
+It's simple, just select a colony you want to destroy and click the abandon colony decision.
+Then click 'Yes,' and your problem will be solved with those ugly xenos and the planet!
+
+[h1] Compatibility [/h1]
+This mod does not overwrite any vanilla files.
+
+[h1] Addon [/h1]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1993870803] Korean Language Addon [/url]
+
+[h1] P.S. [/h1]
+If there's any problem with this mod or you have any questions about this mod, ask me freely.
